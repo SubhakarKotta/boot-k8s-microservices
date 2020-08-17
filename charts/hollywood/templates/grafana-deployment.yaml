@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "hollywood.fullname" . }}-grafana
@@ -9,6 +9,11 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
+  selector:
+    matchLabels:
+      app: {{ template "hollywood.name" . }}        
+      component: grafana
+      release: {{ .Release.Name }}
   replicas: {{ .Values.grafana.replicaCount }}
   template:
     metadata:

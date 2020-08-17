@@ -4,8 +4,8 @@
 actors:
   replicaCount: 1
   image:
-    repository: springdeveloper/actors
-    tag: 0.0.1-SNAPSHOT
+    repository: subhakarkotta/actors
+    tag: latest
     pullPolicy: IfNotPresent
   service:
     name: http
@@ -26,8 +26,8 @@ actors:
 images:
   replicaCount: 1
   image:
-    repository: springdeveloper/images  
-    tag: 0.0.1-SNAPSHOT
+    repository: subhakarkotta/images  
+    tag: latest
     pullPolicy: IfNotPresent
   service:
     name: http
@@ -48,8 +48,8 @@ images:
 gateway:
   replicaCount: 1
   image:
-    repository: springdeveloper/gateway
-    tag: 0.0.1-SNAPSHOT
+    repository: subhakarkotta/gateway
+    tag: latest
     pullPolicy: IfNotPresent
   service:
     name: http
